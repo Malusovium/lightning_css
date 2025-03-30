@@ -92,6 +92,9 @@ defmodule LightningCSS.Runner do
       end)
 
     state = Map.put(state, :process_pid, process_pid)
+
+    Process.exit(self(), :shutdown)
+
     {:noreply, state}
   end
 

@@ -58,7 +58,8 @@ defmodule LightningCSS do
              watch: watch
            }},
           id: id,
-          restart: :transient
+          restart: :permanent
+          # restart: :transient
         )
       )
       |> case do
